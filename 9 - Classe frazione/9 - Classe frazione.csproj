@@ -9,4 +9,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="classeFrazioni">
+      <HintPath>..\classeFrazioni\bin\Debug\classeFrazioni.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

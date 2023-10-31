@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             listView1 = new ListView();
-            button1 = new Button();
+            semplifica = new Button();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
@@ -48,14 +48,15 @@
             listView1.TabIndex = 0;
             listView1.UseCompatibleStateImageBehavior = false;
             // 
-            // button1
+            // semplifica
             // 
-            button1.Location = new Point(402, 222);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 36);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            semplifica.Location = new Point(402, 222);
+            semplifica.Name = "semplifica";
+            semplifica.Size = new Size(94, 36);
+            semplifica.TabIndex = 1;
+            semplifica.Text = "semplifica";
+            semplifica.UseVisualStyleBackColor = true;
+            semplifica.Click += semplifica_Click;
             // 
             // button2
             // 
@@ -138,10 +139,11 @@
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(semplifica);
             Controls.Add(listView1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -149,7 +151,7 @@
         #endregion
 
         private ListView listView1;
-        private Button button1;
+        private Button semplifica;
         private Button button2;
         private Button button3;
         private Button button4;

@@ -33,5 +33,24 @@ namespace classeFrazioni
         public int Numeratore { get { return _numeratore; } set { _numeratore = value; } }
         public int Denominatore { get { return _denominatore; } set { _denominatore = value; } }
 
+        // metodi
+        public int MCD(int num, int den)
+        {
+            int temp;
+            while(den != 0)
+            {
+                temp = den;
+                den = num % den;
+                num = temp;
+            }
+            return num;
+        }
+        public (int, int) semplificaFrazione()
+        {
+            int mcd = MCD(_numeratore, _denominatore);
+            _numeratore /= mcd;
+            _denominatore /= mcd;
+            return (_numeratore, _denominatore);
+        }
     }
 }
