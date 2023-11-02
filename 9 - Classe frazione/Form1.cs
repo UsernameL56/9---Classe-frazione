@@ -25,7 +25,7 @@ namespace _9___Classe_frazione
             denominatore = t.Item2;
 
             listView1.Clear();
-            if(denominatore == 1)
+            if (denominatore == 1)
                 listView1.Items.Add(Convert.ToString(numeratore));
             else listView1.Items.Add(numeratore + "\n" + denominatore);
 
@@ -69,13 +69,35 @@ namespace _9___Classe_frazione
             var risultato = frazione.moltiplicazioneFrazione(frazione2);
             numeratore = risultato.Item1;
             denominatore = risultato.Item2;
-            
+
             var semplifica = frazione.semplificaFrazione(numeratore, denominatore);
             numeratore = semplifica.Item1;
             denominatore = semplifica.Item2;
 
             listView1.Clear();
-            listView1.Items.Add(numeratore + "\n" + denominatore);
+            if (denominatore == 1)
+                listView1.Items.Add(Convert.ToString(numeratore));
+            else listView1.Items.Add(numeratore + "\n" + denominatore);
+        }
+
+        private void divisione_Click(object sender, EventArgs e)
+        {
+            frazione = new Frazione(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
+            frazione2 = new Frazione(int.Parse(textBox3.Text), int.Parse(textBox4.Text));
+
+
+            var risultato = frazione.divisioneFrazione(frazione2);
+            numeratore = risultato.Item1;
+            denominatore = risultato.Item2;
+
+            var semplifica = frazione.semplificaFrazione(numeratore, denominatore);
+            numeratore = semplifica.Item1;
+            denominatore = semplifica.Item2;
+
+            listView1.Clear();
+            if (denominatore == 1)
+                listView1.Items.Add(Convert.ToString(numeratore));
+            else listView1.Items.Add(numeratore + "\n" + denominatore);
         }
     }
 }

@@ -33,7 +33,7 @@
             somma = new Button();
             sottrazione = new Button();
             moltiplicazione = new Button();
-            button5 = new Button();
+            divisione = new Button();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
@@ -89,14 +89,15 @@
             moltiplicazione.UseVisualStyleBackColor = true;
             moltiplicazione.Click += moltiplicazione_Click;
             // 
-            // button5
+            // divisione
             // 
-            button5.Location = new Point(812, 222);
-            button5.Name = "button5";
-            button5.Size = new Size(94, 36);
-            button5.TabIndex = 5;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = true;
+            divisione.Location = new Point(812, 222);
+            divisione.Name = "divisione";
+            divisione.Size = new Size(94, 36);
+            divisione.TabIndex = 5;
+            divisione.Text = "Divisione";
+            divisione.UseVisualStyleBackColor = true;
+            divisione.Click += divisione_Click;
             // 
             // textBox1
             // 
@@ -139,7 +140,7 @@
             Controls.Add(textBox4);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Controls.Add(button5);
+            Controls.Add(divisione);
             Controls.Add(moltiplicazione);
             Controls.Add(sottrazione);
             Controls.Add(somma);
@@ -159,7 +160,7 @@
         private Button somma;
         private Button sottrazione;
         private Button moltiplicazione;
-        private Button button5;
+        private Button divisione;
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;

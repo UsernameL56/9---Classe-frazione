@@ -81,5 +81,13 @@ namespace classeFrazioni
 
             return (risNum, risDen);
         }
+
+        public (int, int) divisioneFrazione(Frazione copiaFrazione)
+        {
+            int risNum = _numeratore * copiaFrazione.Denominatore;
+            int risDen = _denominatore * copiaFrazione.Numeratore;
+
+            return (risNum, risDen);
+        }
     }
 }
