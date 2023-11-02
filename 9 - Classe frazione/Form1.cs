@@ -23,11 +23,14 @@ namespace _9___Classe_frazione
             var t = frazione.semplificaFrazione();
             numeratore = t.Item1;
             denominatore = t.Item2;
-            listView1.Items.Add(numeratore + " " + denominatore);
+
+            listView1.Clear();
+            listView1.Items.Add(numeratore + "\n" + denominatore);
         }
 
         private void somma_Click(object sender, EventArgs e)
         {
+
             frazione = new Frazione(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
             frazione2 = new Frazione(int.Parse(textBox3.Text), int.Parse(textBox4.Text));
 
@@ -35,6 +38,22 @@ namespace _9___Classe_frazione
             var risultato = frazione.sommaFrazione(frazione2);
             numeratore = risultato.Item1;
             denominatore = risultato.Item2;
+
+            listView1.Clear();
+            listView1.Items.Add(numeratore + "\n" + denominatore);
+        }
+
+        private void sottrazione_Click(object sender, EventArgs e)
+        {
+            frazione = new Frazione(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
+            frazione2 = new Frazione(int.Parse(textBox3.Text), int.Parse(textBox4.Text));
+
+
+            var risultato = frazione.sottrazioneFrazione(frazione2);
+            numeratore = risultato.Item1;
+            denominatore = risultato.Item2;
+
+            listView1.Clear();
             listView1.Items.Add(numeratore + "\n" + denominatore);
         }
     }

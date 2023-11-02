@@ -61,5 +61,17 @@ namespace classeFrazioni
 
             return (risNum, mcd);
         }
+
+        public (int, int) sottrazioneFrazione(Frazione copiaFrazione)
+        {
+            int mcd = _denominatore * copiaFrazione.Denominatore / MCD(_denominatore, copiaFrazione.Denominatore);
+
+            int ris1 = _numeratore * (mcd / _denominatore);
+            int ris2 = copiaFrazione.Numeratore * (mcd / copiaFrazione.Denominatore);
+
+            int risNum = ris1 - ris2;
+
+            return (risNum, mcd);
+        }
     }
 }

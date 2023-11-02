@@ -31,7 +31,7 @@
             listView1 = new ListView();
             semplifica = new Button();
             somma = new Button();
-            button3 = new Button();
+            sottrazione = new Button();
             button4 = new Button();
             button5 = new Button();
             textBox1 = new TextBox();
@@ -69,14 +69,15 @@
             somma.UseVisualStyleBackColor = true;
             somma.Click += somma_Click;
             // 
-            // button3
+            // sottrazione
             // 
-            button3.Location = new Point(602, 222);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 36);
-            button3.TabIndex = 3;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            sottrazione.Location = new Point(602, 222);
+            sottrazione.Name = "sottrazione";
+            sottrazione.Size = new Size(94, 36);
+            sottrazione.TabIndex = 3;
+            sottrazione.Text = "Sottrazione";
+            sottrazione.UseVisualStyleBackColor = true;
+            sottrazione.Click += sottrazione_Click;
             // 
             // button4
             // 
@@ -139,7 +140,7 @@
             Controls.Add(textBox1);
             Controls.Add(button5);
             Controls.Add(button4);
-            Controls.Add(button3);
+            Controls.Add(sottrazione);
             Controls.Add(somma);
             Controls.Add(semplifica);
             Controls.Add(listView1);
@@ -155,7 +156,7 @@
         private ListView listView1;
         private Button semplifica;
         private Button somma;
-        private Button button3;
+        private Button sottrazione;
         private Button button4;
         private Button button5;
         private TextBox textBox1;
