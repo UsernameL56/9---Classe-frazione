@@ -30,7 +30,7 @@
         {
             listView1 = new ListView();
             semplifica = new Button();
-            button2 = new Button();
+            somma = new Button();
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
@@ -42,6 +42,7 @@
             // 
             // listView1
             // 
+            listView1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
             listView1.Location = new Point(402, 36);
             listView1.Name = "listView1";
             listView1.Size = new Size(494, 133);
@@ -54,18 +55,19 @@
             semplifica.Name = "semplifica";
             semplifica.Size = new Size(94, 36);
             semplifica.TabIndex = 1;
-            semplifica.Text = "semplifica";
+            semplifica.Text = "Semplifica";
             semplifica.UseVisualStyleBackColor = true;
             semplifica.Click += semplifica_Click;
             // 
-            // button2
+            // somma
             // 
-            button2.Location = new Point(502, 222);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 36);
-            button2.TabIndex = 2;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            somma.Location = new Point(502, 222);
+            somma.Name = "somma";
+            somma.Size = new Size(94, 36);
+            somma.TabIndex = 2;
+            somma.Text = "Somma";
+            somma.UseVisualStyleBackColor = true;
+            somma.Click += somma_Click;
             // 
             // button3
             // 
@@ -112,7 +114,7 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(176, 99);
+            textBox3.Location = new Point(176, 36);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(90, 45);
@@ -120,7 +122,7 @@
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(176, 36);
+            textBox4.Location = new Point(176, 99);
             textBox4.Multiline = true;
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(90, 45);
@@ -138,7 +140,7 @@
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(somma);
             Controls.Add(semplifica);
             Controls.Add(listView1);
             Name = "Form1";
@@ -152,7 +154,7 @@
 
         private ListView listView1;
         private Button semplifica;
-        private Button button2;
+        private Button somma;
         private Button button3;
         private Button button4;
         private Button button5;

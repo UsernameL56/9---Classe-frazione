@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace classeFrazioni
 {
-    public class Class1
-    {
-    }
 
     public class Frazione
     {
@@ -51,6 +48,18 @@ namespace classeFrazioni
             _numeratore /= mcd;
             _denominatore /= mcd;
             return (_numeratore, _denominatore);
+        }
+
+        public (int, int) sommaFrazione(Frazione copiaFrazione)
+        {
+            int mcd = _denominatore * copiaFrazione.Denominatore / MCD(_denominatore, copiaFrazione.Denominatore);
+
+            int ris1 = _numeratore * (mcd / _denominatore);
+            int ris2 = copiaFrazione.Numeratore * (mcd / copiaFrazione.Denominatore);
+
+            int risNum = ris1 + ris2;
+
+            return (risNum, mcd);
         }
     }
 }
