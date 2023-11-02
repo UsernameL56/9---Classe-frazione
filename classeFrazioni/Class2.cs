@@ -20,5 +20,10 @@ namespace classeFrazioni
 
             return ris;
         }
+
+        public (int, int) elevamentoFrazione(int num, int den, double x)
+        {
+            double risNum = Math.Pow(Convert.ToDouble(num), x);
+        }
     }
 }
