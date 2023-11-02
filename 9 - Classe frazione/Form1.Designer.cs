@@ -38,6 +38,7 @@
             textBox2 = new TextBox();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
+            FrazToDec = new Button();
             SuspendLayout();
             // 
             // listView1
@@ -131,11 +132,22 @@
             textBox4.Size = new Size(90, 45);
             textBox4.TabIndex = 8;
             // 
+            // FrazToDec
+            // 
+            FrazToDec.Location = new Point(402, 297);
+            FrazToDec.Name = "FrazToDec";
+            FrazToDec.Size = new Size(94, 36);
+            FrazToDec.TabIndex = 10;
+            FrazToDec.Text = "FrazToDec";
+            FrazToDec.UseVisualStyleBackColor = true;
+            FrazToDec.Click += FrazToDec_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1561, 633);
+            Controls.Add(FrazToDec);
             Controls.Add(textBox3);
             Controls.Add(textBox4);
             Controls.Add(textBox2);
@@ -165,5 +177,6 @@
         private TextBox textBox2;
         private TextBox textBox3;
         private TextBox textBox4;
+        private Button FrazToDec;
     }
 }

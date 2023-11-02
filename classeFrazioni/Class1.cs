@@ -10,8 +10,8 @@ namespace classeFrazioni
     public class Frazione
     {
         // attributi
-        private int _numeratore;
-        private int _denominatore;
+        protected int _numeratore;
+        protected int _denominatore;
 
         // costruttore
         public Frazione(int _numeratore, int _denominatore) 

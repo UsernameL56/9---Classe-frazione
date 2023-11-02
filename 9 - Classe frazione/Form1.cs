@@ -6,6 +6,7 @@ namespace _9___Classe_frazione
     {
         public int numeratore, denominatore;
         Frazione frazione, frazione2;
+        Estensione fraz;
         public Form1()
         {
             InitializeComponent();
@@ -42,8 +43,14 @@ namespace _9___Classe_frazione
             numeratore = risultato.Item1;
             denominatore = risultato.Item2;
 
+            var semplifica = frazione.semplificaFrazione(numeratore, denominatore);
+            numeratore = semplifica.Item1;
+            denominatore = semplifica.Item2;
+
             listView1.Clear();
-            listView1.Items.Add(numeratore + "\n" + denominatore);
+            if (denominatore == 1)
+                listView1.Items.Add(Convert.ToString(numeratore));
+            else listView1.Items.Add(numeratore + "\n" + denominatore);
         }
 
         private void sottrazione_Click(object sender, EventArgs e)
@@ -56,8 +63,14 @@ namespace _9___Classe_frazione
             numeratore = risultato.Item1;
             denominatore = risultato.Item2;
 
+            var semplifica = frazione.semplificaFrazione(numeratore, denominatore);
+            numeratore = semplifica.Item1;
+            denominatore = semplifica.Item2;
+
             listView1.Clear();
-            listView1.Items.Add(numeratore + "\n" + denominatore);
+            if (denominatore == 1)
+                listView1.Items.Add(Convert.ToString(numeratore));
+            else listView1.Items.Add(numeratore + "\n" + denominatore);
         }
 
         private void moltiplicazione_Click(object sender, EventArgs e)
@@ -98,6 +111,13 @@ namespace _9___Classe_frazione
             if (denominatore == 1)
                 listView1.Items.Add(Convert.ToString(numeratore));
             else listView1.Items.Add(numeratore + "\n" + denominatore);
+        }
+
+        private void FrazToDec_Click(object sender, EventArgs e)
+        {
+            fraz = new Estensione(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
+            double ris = fraz.decimaleFrazione(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
+            listView1.Items.Add(Convert.ToString(ris));
         }
     }
 }
