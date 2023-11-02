@@ -42,12 +42,12 @@ namespace classeFrazioni
             }
             return num;
         }
-        public (int, int) semplificaFrazione()
+        public (int, int) semplificaFrazione(int num, int den)
         {
-            int mcd = MCD(_numeratore, _denominatore);
-            _numeratore /= mcd;
-            _denominatore /= mcd;
-            return (_numeratore, _denominatore);
+            int mcd = MCD(num, den);
+            num /= mcd;
+            den /= mcd;
+            return (num, den);
         }
 
         public (int, int) sommaFrazione(Frazione copiaFrazione)
@@ -72,6 +72,14 @@ namespace classeFrazioni
             int risNum = ris1 - ris2;
 
             return (risNum, mcd);
+        }
+
+        public (int, int) moltiplicazioneFrazione(Frazione copiaFrazione)
+        {
+            int risNum = _numeratore * copiaFrazione.Numeratore;
+            int risDen = _denominatore * copiaFrazione.Denominatore;
+
+            return (risNum, risDen);
         }
     }
 }

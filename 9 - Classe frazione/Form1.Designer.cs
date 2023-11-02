@@ -32,7 +32,7 @@
             semplifica = new Button();
             somma = new Button();
             sottrazione = new Button();
-            button4 = new Button();
+            moltiplicazione = new Button();
             button5 = new Button();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
@@ -79,18 +79,19 @@
             sottrazione.UseVisualStyleBackColor = true;
             sottrazione.Click += sottrazione_Click;
             // 
-            // button4
+            // moltiplicazione
             // 
-            button4.Location = new Point(702, 222);
-            button4.Name = "button4";
-            button4.Size = new Size(94, 36);
-            button4.TabIndex = 4;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            moltiplicazione.Location = new Point(702, 222);
+            moltiplicazione.Name = "moltiplicazione";
+            moltiplicazione.Size = new Size(104, 36);
+            moltiplicazione.TabIndex = 4;
+            moltiplicazione.Text = "Moltiplicazione";
+            moltiplicazione.UseVisualStyleBackColor = true;
+            moltiplicazione.Click += moltiplicazione_Click;
             // 
             // button5
             // 
-            button5.Location = new Point(802, 222);
+            button5.Location = new Point(812, 222);
             button5.Name = "button5";
             button5.Size = new Size(94, 36);
             button5.TabIndex = 5;
@@ -139,7 +140,7 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(button5);
-            Controls.Add(button4);
+            Controls.Add(moltiplicazione);
             Controls.Add(sottrazione);
             Controls.Add(somma);
             Controls.Add(semplifica);
@@ -157,7 +158,7 @@
         private Button semplifica;
         private Button somma;
         private Button sottrazione;
-        private Button button4;
+        private Button moltiplicazione;
         private Button button5;
         private TextBox textBox1;
         private TextBox textBox2;
